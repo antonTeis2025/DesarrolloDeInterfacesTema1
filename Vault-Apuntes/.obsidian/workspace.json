@@ -1,0 +1,248 @@
+{
+  "main": {
+    "id": "2e190fc1799fd90e",
+    "type": "split",
+    "children": [
+      {
+        "id": "bc123666c46f1754",
+        "type": "tabs",
+        "dimension": 78.63247863247864,
+        "children": [
+          {
+            "id": "1c0fc07bcd56309a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Estructura del proyecto/var.py.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "var.py"
+            }
+          },
+          {
+            "id": "6155d245cea92a33",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Elementos/Ventanas modales.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ventanas modales"
+            }
+          },
+          {
+            "id": "91fc1da63d9e3038",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Elementos/Ventanas modales.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ventanas modales"
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "134ce6982a1c8e14",
+        "type": "tabs",
+        "dimension": 21.367521367521366,
+        "children": [
+          {
+            "id": "5f2cd79d9524affc",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "40f44909ae33c8ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "b4f083ef05512a66",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9857ef19b58572c0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "09305d7c63a4e23a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "510ba714afab7ce2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f8da53845aeeebfe",
+    "type": "split",
+    "children": [
+      {
+        "id": "5cd49528a2194ff5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "29b4754bac803e8f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Elementos/Ventanas modales.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Ventanas modales"
+            }
+          },
+          {
+            "id": "f4565d2e1d4b46bf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Elementos/Ventanas modales.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Ventanas modales"
+            }
+          },
+          {
+            "id": "f5ada43ba50b8ca4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b9c1efb783c20ff6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Elementos/Ventanas modales.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Ventanas modales"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "91fc1da63d9e3038",
+  "lastOpenFiles": [
+    "img/Pasted image 20251111204446.png",
+    "Elementos/Imagenes.md",
+    "img/Pasted image 20251111202809.png",
+    "Elementos/Ventanas modales.md",
+    "img/Pasted image 20251111202033.png",
+    "Elementos/Radio Button.md",
+    "Elementos/Line edit.md",
+    "Elementos/Label.md",
+    "Elementos/ComboBox (Lista desplegable).md",
+    "Elementos/Botón.md",
+    "Elementos/Checkbox.md",
+    "Elementos/Accion del menu.md",
+    "img/Pasted image 20251111195129.png",
+    "Estructura del proyecto/templates.md",
+    "Estructura del proyecto/events.py.md",
+    "img/Pasted image 20251111190403.png",
+    "img/Pasted image 20251111190332.png",
+    "img/Pasted image 20251111190312.png",
+    "img/Pasted image 20251111190253.png",
+    "img/Pasted image 20251111190224.png",
+    "img",
+    "img/Pasted image 20251111190159.png",
+    "Estructura del proyecto/var.py.md",
+    "Elementos",
+    "Welcome.md",
+    "Estructura del proyecto"
+  ]
+}
