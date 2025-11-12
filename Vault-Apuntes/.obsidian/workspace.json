@@ -6,7 +6,6 @@
       {
         "id": "bc123666c46f1754",
         "type": "tabs",
-        "dimension": 78.63247863247864,
         "children": [
           {
             "id": "1c0fc07bcd56309a",
@@ -49,26 +48,37 @@
               "icon": "lucide-file",
               "title": "Ventanas modales"
             }
-          }
-        ],
-        "currentTab": 2
-      },
-      {
-        "id": "134ce6982a1c8e14",
-        "type": "tabs",
-        "dimension": 21.367521367521366,
-        "children": [
+          },
           {
-            "id": "5f2cd79d9524affc",
+            "id": "2eca50dc0575adbd",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Elementos/Ventanas modales.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ventanas modales"
+            }
+          },
+          {
+            "id": "03b9eabd50961326",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Elementos/Calendario.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Calendario"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -125,7 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "f8da53845aeeebfe",
@@ -216,19 +226,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "91fc1da63d9e3038",
+  "active": "03b9eabd50961326",
   "lastOpenFiles": [
-    "img/Pasted image 20251111204446.png",
-    "Elementos/Imagenes.md",
-    "img/Pasted image 20251111202809.png",
-    "Elementos/Ventanas modales.md",
-    "img/Pasted image 20251111202033.png",
-    "Elementos/Radio Button.md",
-    "Elementos/Line edit.md",
-    "Elementos/Label.md",
-    "Elementos/ComboBox (Lista desplegable).md",
+    "img/Pasted image 20251112184409.png",
+    "Elementos/Calendario.md",
     "Elementos/Botón.md",
+    "Elementos/Ventanas modales.md",
+    "img/Pasted image 20251112183200.png",
+    "img/Pasted image 20251112183218.png",
+    "Elementos/Line edit.md",
+    "img/Pasted image 20251112175253.png",
+    "Elementos/Radio Button.md",
+    "Elementos/Imagenes.md",
     "Elementos/Checkbox.md",
+    "Elementos/ComboBox (Lista desplegable).md",
+    "Elementos/Label.md",
+    "img/Pasted image 20251111204446.png",
+    "img/Pasted image 20251111202809.png",
+    "img/Pasted image 20251111202033.png",
     "Elementos/Accion del menu.md",
     "img/Pasted image 20251111195129.png",
     "Estructura del proyecto/templates.md",
@@ -236,10 +251,7 @@
     "img/Pasted image 20251111190403.png",
     "img/Pasted image 20251111190332.png",
     "img/Pasted image 20251111190312.png",
-    "img/Pasted image 20251111190253.png",
-    "img/Pasted image 20251111190224.png",
     "img",
-    "img/Pasted image 20251111190159.png",
     "Estructura del proyecto/var.py.md",
     "Elementos",
     "Welcome.md",

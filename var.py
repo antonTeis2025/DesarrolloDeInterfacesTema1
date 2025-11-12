@@ -3,3 +3,4 @@ rbtsexo = None
 cbpago = None
 avisosalir = None
 dlgSalir = None
+dlgcalendar = None

@@ -2,7 +2,10 @@ from var import rbtsexo
 from window import *
 import confirmacion_salida
 import sys
-import var, events, clients # importacion de los ficheros locales
+import var, events, clients, calendar # importacion de los ficheros locales
+import datetime
+
+
 
 
 class Main(QtWidgets.QMainWindow):
@@ -10,7 +13,8 @@ class Main(QtWidgets.QMainWindow):
         super(Main, self).__init__()
         var.ui = Ui_MainWindow()
         var.ui.setupUi(self)
-
+        # Cargamos el objeto DialogCalendar a una variable global
+        var.dlgcalendar = calendar.DialogCalendar()
         # Cargamos el menú de salir a una variable global
         var.avisosalir = confirmacion_salida.Ui_Dialog()
         # Creamos un QtDialog, para que salga como ventana de confirmacion
@@ -39,7 +43,8 @@ class Main(QtWidgets.QMainWindow):
         for i in var.cbpago:
             # Hacemos que por cada actualización, se ejecute selPago
             i.stateChanged.connect(clients.Customers.selPago)
-
+        # Al pulsar el boton del calendario, se abre el widged almacenado en dlgCalendar
+        var.ui.botCalendar.clicked.connect(events.Eventos.abrirCalendar)
 
         # Eventos editando
 
