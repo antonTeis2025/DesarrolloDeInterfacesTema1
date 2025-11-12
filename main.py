@@ -29,6 +29,7 @@ class Main(QtWidgets.QMainWindow):
 
         # Eventos botones
 
+
         # Boton que cuando se le da a salir limpia todos los datos
         var.ui.botSalir.clicked.connect(clients.Customers.limpiarCliente)
         # Boton que cuando se le da a salir en el menu ejecuta Salir
@@ -45,6 +46,12 @@ class Main(QtWidgets.QMainWindow):
             i.stateChanged.connect(clients.Customers.selPago)
         # Al pulsar el boton del calendario, se abre el widged almacenado en dlgCalendar
         var.ui.botCalendar.clicked.connect(events.Eventos.abrirCalendar)
+        # Asignamos al boton de aceptar la funcion insertarCliente
+        var.ui.botAceptar.clicked.connect(clients.Customers.insertarCliente)
+        # Hacemos que en la tabla no se seleccione solamente una celda, sino toda su fila
+        var.ui.tablaClientes.setSelectionBehavior(QtWidgets.QTableWidget.SelectRows)
+        # Hacemos que al hacer click en un registro de la tabla, se cargue el cliente
+        var.ui.tablaClientes.clicked.connect(clients.Customers.cargarCliente)
 
         # Eventos editando
 

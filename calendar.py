@@ -10,7 +10,7 @@ import events
 import datetime
 import var
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import clients
 
 
 class Ui_Dialog(object):
@@ -43,7 +43,7 @@ class DialogCalendar(QtWidgets.QDialog):
         # Con el metodo setSelectedDate de calendarWidget, establecemos la fecha mostrada a la de hoy. Hay que pasarsela convertida a tipo QDate
         var.dlgcalendar.calendarWidget.setSelectedDate(QtCore.QDate(anoactual,mesactual,diaactual))
         # Hacemos que cuando se clickee sobre el, cargue la fecha al line edit con el método cargarFecha
-        var.dlgcalendar.calendarWidget.clicked.connect(events.Eventos.cargarFecha)
+        var.dlgcalendar.calendarWidget.clicked.connect(clients.Customers.cargarFecha)
 
 if __name__ == "__main__":
     import sys
