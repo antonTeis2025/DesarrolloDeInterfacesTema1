@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Elementos/Pestañas.md",
+                "file": "Elementos/Tablas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pestañas"
+              "title": "Tablas"
             }
           }
         ],
@@ -242,10 +242,10 @@
   },
   "active": "1ea9b960cacb3bb2",
   "lastOpenFiles": [
+    "Elementos/Pestañas.md",
     "img/Pasted image 20251112204753.png",
     "img/Pasted image 20251112204552.png",
     "Elementos/Tablas.md",
-    "Elementos/Pestañas.md",
     "img/Pasted image 20251112200848.png",
     "Elementos/ComboBox (Lista desplegable).md",
     "Elementos/Untitled",
@@ -265,7 +265,6 @@
     "img/Pasted image 20251111202809.png",
     "img/Pasted image 20251111202033.png",
     "Elementos/Accion del menu.md",
-    "img/Pasted image 20251111195129.png",
     "Estructura del proyecto/templates.md",
     "Estructura del proyecto/events.py.md",
     "img",

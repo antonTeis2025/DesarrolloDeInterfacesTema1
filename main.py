@@ -3,13 +3,15 @@ from window import *
 import confirmacion_salida
 import sys
 import var, events, clients, calendar # importacion de los ficheros locales
-import datetime
+import conexion
 
 
 
 
 class Main(QtWidgets.QMainWindow):
     def __init__(self):
+
+
         super(Main, self).__init__()
         var.ui = Ui_MainWindow()
         var.ui.setupUi(self)
@@ -21,6 +23,9 @@ class Main(QtWidgets.QMainWindow):
         var.dlgSalir = QtWidgets.QDialog()
         # Hacemos el setupUI con el dialogo como argumento
         var.avisosalir.setupUi(var.dlgSalir)
+
+        # Cargar conexion a base de datos
+        conexion.Conexion.db_connection(var.dbfile)
 
         # --- Conexion con los eventos ---
 
