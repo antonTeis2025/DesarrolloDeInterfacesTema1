@@ -5,6 +5,7 @@ avisosalir = None
 dlgSalir = None
 dlgcalendar = None
 dlgAbrir = None
+report = None
 dbfile = "clientes.db"
 
 # Variables para el cliente

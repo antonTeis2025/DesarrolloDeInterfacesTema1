@@ -135,10 +135,13 @@ class Ui_MainWindow(object):
         self.actionBackup.setObjectName("actionBackup")
         self.actionRestaurar = QtGui.QAction(parent=MainWindow)
         self.actionRestaurar.setObjectName("actionRestaurar")
+        self.actionInforme = QtGui.QAction(parent=MainWindow)
+        self.actionInforme.setObjectName("actionInforme")
         self.menuArchilo.addAction(self.actionSalir)
         self.menubar.addAction(self.menuArchilo.menuAction())
         self.toolBar.addAction(self.actionBackup)
         self.toolBar.addAction(self.actionRestaurar)
+        self.toolBar.addAction(self.actionInforme)
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
@@ -176,6 +179,7 @@ class Ui_MainWindow(object):
         self.actionSalir.setText(_translate("MainWindow", "Salir"))
         self.actionBackup.setText(_translate("MainWindow", "Backup"))
         self.actionRestaurar.setText(_translate("MainWindow", "Restaurar"))
+        self.actionInforme.setText(_translate("MainWindow", "Informe"))
 
 
 if __name__ == "__main__":

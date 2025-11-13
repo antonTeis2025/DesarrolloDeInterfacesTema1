@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3. Operaciones auxiliares/Restaurar copias de seguridad.md",
+                "file": "3. Operaciones auxiliares/Crear copias de seguridad.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Restaurar copias de seguridad"
+              "title": "Crear copias de seguridad"
             }
           }
         ]
@@ -169,11 +169,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "1a36235333e35618",
+  "active": "9857ef19b58572c0",
   "lastOpenFiles": [
-    "3. Operaciones auxiliares/Crear copias de seguridad.md",
     "3. Operaciones auxiliares/Restaurar copias de seguridad.md",
+    "3. Operaciones auxiliares/Crear copias de seguridad.md",
     "3. Operaciones auxiliares/0. Dialogo abrir archivo.md",
+    "4. Informes/1. Crear una cabecera.md",
+    "4. Informes/2. Crear cuerpo del informe.md",
+    "4. Informes/0. reportlab.md",
+    "4. Informes/3. Pie de pagina del informe.md",
+    "reportlab-userguide.pdf",
+    "Sin confirmar 491908.crdownload",
+    "img/Pasted image 20251113222757.png",
+    "4. Informes",
     "1. Elementos/Tool Bar.md",
     "img/Pasted image 20251113214956.png",
     "img/Pasted image 20251113214933.png",
@@ -202,9 +210,6 @@
     "1. Elementos/Radio Button.md",
     "2. Acceso a datos/1. Insertar datos.md",
     "img/explicacion update.canvas",
-    "1. Elementos/Ventanas modales.md",
-    "Untitled.md",
-    "2. Acceso a datos/2. Consultar datos.md",
     "img/Logica eliminar.canvas",
     "2. Acceso a datos",
     "img/Pasted image 20251112204753.png",
@@ -212,9 +217,7 @@
     "img/Pasted image 20251112200848.png",
     "Elementos/Untitled",
     "img/Pasted image 20251112184409.png",
-    "img/Pasted image 20251112183200.png",
     "img",
-    "1. Elementos",
-    "0. Estructura del proyecto"
+    "1. Elementos"
   ]
 }

@@ -390,6 +390,7 @@
    </attribute>
    <addaction name="actionBackup"/>
    <addaction name="actionRestaurar"/>
+   <addaction name="actionInforme"/>
   </widget>
   <action name="actionSalir">
    <property name="text">
@@ -404,6 +405,11 @@
   <action name="actionRestaurar">
    <property name="text">
     <string>Restaurar</string>
+   </property>
+  </action>
+  <action name="actionInforme">
+   <property name="text">
+    <string>Informe</string>
    </property>
   </action>
  </widget>

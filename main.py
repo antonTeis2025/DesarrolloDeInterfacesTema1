@@ -4,7 +4,7 @@ import confirmacion_salida
 import sys
 import var, events, clients, calendar # importacion de los ficheros locales
 import conexion
-
+import reports
 
 class DialogoArchivo(QtWidgets.QFileDialog):
     def __init__(self, parent=None):
@@ -72,6 +72,8 @@ class Main(QtWidgets.QMainWindow):
         var.ui.actionBackup.triggered.connect(events.Eventos.crearBackup)
         # Conectado boton toolbar restaurar copia
         var.ui.actionRestaurar.triggered.connect(events.Eventos.restaurarBackup)
+        # Boton toolbar informes
+        var.ui.actionInforme.triggered.connect(reports.Printer.reportListaClientes)
 
         # Eventos editando
 
