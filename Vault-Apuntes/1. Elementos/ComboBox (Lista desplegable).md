@@ -14,13 +14,22 @@ def cargaProvincias():
         print("Error ", error)
 ```
 Para **leer el dato seleccionado** usamos el trigger ``activated``, con ``[str]`` para que lo devuelva en texto plano.
+
 ```python
 var.ui.comboBoxProvincias.activated[str].connect(clients.Customers.selProvincia)
 ```
 	!! EN PYQT6 es así
 	textActivated.connect()
+
 La función selProvincia recibe como argumento la salida de ``activated[str]``, que es la provincia en texto plano
+
 ```python
 def selProvincia(provincia):  
     print("Has seleccionado la provincia: ", provincia)
+```
+
+Si queremos que la combobox **seleccione un elemento ya definido** lo haremos con:
+
+```python
+var.ui.comboBoxProvincias.setCurrentText("Pontevedra")
 ```

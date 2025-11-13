@@ -26,7 +26,7 @@ class Eventos():
     def Salir():
         try:
             result = var.dlgSalir.exec()
-            if result == QtWidgets.QDialog.Accepted:
+            if result == QtWidgets.QDialog.DialogCode.Accepted:
                 print("Saliendo...")
                 sys.exit()
 

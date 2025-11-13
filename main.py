@@ -26,6 +26,8 @@ class Main(QtWidgets.QMainWindow):
 
         # Cargar conexion a base de datos
         conexion.Conexion.db_connection(var.dbfile)
+        # Carga valores de la tabla clientes a la tabla de la UI
+        conexion.Conexion.cargarClientesTabla()
 
         # --- Conexion con los eventos ---
 
@@ -57,6 +59,10 @@ class Main(QtWidgets.QMainWindow):
         var.ui.tablaClientes.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows)
         # Hacemos que al hacer click en un registro de la tabla, se cargue el cliente
         var.ui.tablaClientes.clicked.connect(clients.Customers.cargarCliente)
+        # Conectado boton eliminar con funcion eliminar
+        var.ui.botBorrar.clicked.connect(clients.Customers.bajaCliente)
+        # Conectado boton actualizar con su funcion
+        var.ui.botModificar.clicked.connect(clients.Customers.modificaCliente)
 
         # Eventos editando
 
@@ -64,6 +70,7 @@ class Main(QtWidgets.QMainWindow):
         var.ui.txtDniCli.editingFinished.connect(clients.Customers.checkDni)
         # Cada vez que se edite ComboBox provincia, ejecuta selProvincia
         var.ui.comboBoxProvincias.textActivated.connect(clients.Customers.selProvincia)
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])

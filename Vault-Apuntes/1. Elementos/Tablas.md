@@ -121,3 +121,15 @@ Configuraremos un evento para la tabla para que con hacer click sobre un registr
         except Exception as e:
             print("Error ", e)
 ```
+
+---
+### Limpiar tabla
+
+Para limpiar una tabla:
+
+```python
+# Borra los contenidos (.clear() borra tambien nombres d columnas)
+var.ui.tablaClientes.clearContents()  
+# Borra todas las filas
+var.ui.tablaClientes.setRowCount(0)
+```

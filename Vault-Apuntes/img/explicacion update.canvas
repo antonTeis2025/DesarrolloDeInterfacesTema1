@@ -1,0 +1,18 @@
+{
+	"nodes":[
+		{"id":"d0868f53df54504b","type":"text","text":"**UI**\n\nUsuario modifica los datos\n\nUsuario pulsa botón modificar","x":-500,"y":300,"width":250,"height":180,"color":"1"},
+		{"id":"555b3f28eb876cc9","type":"text","text":"**clients.py**\n\nRecoge los datos","x":-200,"y":300,"width":250,"height":180,"color":"2"},
+		{"id":"839257c500f809be","type":"text","text":"**conexion.py**\n\nUPDATE en BBDD","x":140,"y":300,"width":250,"height":180,"color":"3"},
+		{"id":"b1d7679a31e39797","type":"text","text":"**UI**\n\nUsuario pulsa registro de\nTabla de clientes","x":-625,"y":-220,"width":250,"height":140,"color":"1"},
+		{"id":"2006fb601ba8305e","type":"text","text":"**clients.py**\n\nbusca los datos del cliente\ncon DNI\n","x":-305,"y":-220,"width":250,"height":140,"color":"2"},
+		{"id":"39ba5c5272919f51","type":"text","text":"**conexion.py**\n\nSELECT en BBDD","x":15,"y":-220,"width":250,"height":140,"color":"3"},
+		{"id":"d154a1e032563ca2","type":"text","text":"**clients.py**\n\ncarga los datos al UI","x":335,"y":80,"width":250,"height":140,"color":"2"}
+	],
+	"edges":[
+		{"id":"b9d2c6a27f1fe70d","fromNode":"b1d7679a31e39797","fromSide":"right","toNode":"2006fb601ba8305e","toSide":"left"},
+		{"id":"2a454f943bf5a296","fromNode":"2006fb601ba8305e","fromSide":"right","toNode":"39ba5c5272919f51","toSide":"left"},
+		{"id":"c77394c80723948d","fromNode":"39ba5c5272919f51","fromSide":"right","toNode":"d154a1e032563ca2","toSide":"left"},
+		{"id":"7d7f6eb2b198b2f6","fromNode":"555b3f28eb876cc9","fromSide":"right","toNode":"839257c500f809be","toSide":"left"},
+		{"id":"fbe8d81c0cf954fc","fromNode":"d0868f53df54504b","fromSide":"right","toNode":"555b3f28eb876cc9","toSide":"left"}
+	]
+}

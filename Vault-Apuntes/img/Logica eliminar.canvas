@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"44b10f91dc4960e9","type":"text","text":"**UI**\n\nBoton Eliminar","x":-520,"y":-60,"width":140,"height":120,"color":"1"},
+		{"id":"15623a067916d56f","type":"text","text":"**clientes.py**\n\nRecoge los datos\nLLama a conexion","x":-100,"y":-60,"width":180,"height":120,"color":"2"},
+		{"id":"55519cf3d4f3c83a","type":"text","text":"**conexion.py**\n\nDELETE FROM cliente...","x":320,"y":-60,"width":180,"height":120,"color":"3"}
+	],
+	"edges":[
+		{"id":"22bc7dca9ce8d011","fromNode":"44b10f91dc4960e9","fromSide":"right","toNode":"15623a067916d56f","toSide":"left","label":"Quiero eliminar\nel cliente que \ntengo seleccionado\n\n"},
+		{"id":"65c0b75c3bcf5396","fromNode":"15623a067916d56f","fromSide":"right","toNode":"55519cf3d4f3c83a","toSide":"left","label":"Quiero borrar \nel cliente id = 1"}
+	]
+}

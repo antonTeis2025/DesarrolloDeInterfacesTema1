@@ -1,5 +1,6 @@
 from PyQt6 import QtWidgets
 
+import conexion
 import var
 
 class Customers:
@@ -36,20 +37,20 @@ class Customers:
     def selPago():
         try:
             var.pay = [] # Vaciamos la lista de los metodos de pago
-            for i, data in enumerate(var.ui.buttonGroup): # checkBoxPago es un grupo de botones
-                if data.isChecked() and i == 0:
+            for i, data in enumerate(var.ui.buttonGroup.buttons()): # checkBoxPago es un grupo de botones
+                if data.isChecked() and i == 2:
                     print("Paga en efectivo")
                     var.pay.append("Efectivo")
-                if data.isChecked() and i == 1:
+                if data.isChecked() and i == 0:
                     print("Paga en tarjeta")
                     var.pay.append("Tarjeta")
-                if data.isChecked() and i == 2:
+                if data.isChecked() and i == 1:
                     print("Paga en transferencia")
                     var.pay.append("Transferencia")
 
         except Exception as error:
             print("Error ", error)
-        print(var.pay)
+        return var.pay
 
     def selSexo():
         global sex
@@ -114,13 +115,12 @@ class Customers:
                 var.ui.txtFecha.text(),
                 var.provincia
             ]
-            # Eliminamos los duplicados de los métodos de pago (las checkboxes dan ese problema)
-            var.pay = set(var.pay)
-            for i in var.pay:
-                # Añadimos al diccionario cliente los metodos de pago
-                cliente.append(i)
+            # Cargamos la lista de los metodos de pago que ha usado el cliente
+            var.pay2 = Customers.selPago()
             # Añadimos la variable global que guarda su sexo
             cliente.append(sex)
+            # Añadimos la lista de pagos al diccionario cliente
+            cliente.append(var.pay2)
             # Probamos a imprimir el cliente para ver si está to bien
             print(cliente)
             # Limpiamos la lista de pagos
@@ -130,48 +130,87 @@ class Customers:
         except Exception as error:
             print("Error ", error)
 
+    def modificaCliente():
+        cliente = Customers.datosCliente()
+        conexion.Conexion.actualizaCliente(cliente)
+
     def insertarCliente():
         try:
             # Creamos un diccionario vacio que será el que insertemos en la tabla
-            insertar = []
+            # insertar = []
             # Conseguimos la lista de datos del cliente
             cliente = Customers.datosCliente()
             # Insertamos los 3 primeros datos de cliente (DNI, apellidos y nombre) al diccionario que se insertara
-            insertar.append(cliente[0])
-            insertar.append(cliente[1])
-            insertar.append(cliente[2])
+            # insertar.append(cliente[0])
+            # insertar.append(cliente[1])
+            # insertar.append(cliente[2])
 
-            row = 0 # Posicion de la fila para que inserte arriba de to
-            column = 0 # Posicion de la columna
-            var.ui.tablaClientes.insertRow(row) # Añade una fila a la tabla
-            for registro in insertar:
-                # cada celda tiene una posición (fila, columna) y cargamos el dato
-                cell = QtWidgets.QTableWidgetItem(registro) # Creamos un objeto tipo celda de QTable
-                var.ui.tablaClientes.setItem(row, column, cell) # Escribe el dato cell en la posicion row, column
-                column+=1 # Suma 1 para ir a la siguiente columna a insertar el siguiente registro
-            print(insertar)
+            # row = 0 # Posicion de la fila para que inserte arriba de to
+            # column = 0 # Posicion de la columna
+            # var.ui.tablaClientes.insertRow(row) # Añade una fila a la tabla
+            #    for registro in insertar:
+            #        # cada celda tiene una posición (fila, columna) y cargamos el dato
+            #        cell = QtWidgets.QTableWidgetItem(registro) # Creamos un objeto tipo celda de QTable
+            #        var.ui.tablaClientes.setItem(row, column, cell) # Escribe el dato cell en la posicion row, column
+            #        column+=1 # Suma 1 para ir a la siguiente columna a insertar el siguiente registro
+            #    print(cliente)
+            conexion.Conexion.insertarCliente(cliente)
 
         except Exception as error:
             print("Error ", error)
 
     def cargarCliente():
         try:
+            # Antes de cargar nada limpiamos todos los campos para evitar errores
+            Customers.limpiarCliente()
             # Cargamos a la variable fila los valores de la fila seleccionada de la tabla
             # !! Esta fila es una lista de objetos tipo QTableWidgetItem, no de strings
             fila = var.ui.tablaClientes.selectedItems()
-            # Creamos un diccionario con los widgets line edit a los que cargaremos los datos
-            camposCliente = [var.ui.txtDniCli, var.ui.txtApelidosCli, var.ui.txtNombreCli]
             if fila: # Si la fila no está vacía...
                 # Extraemos el texto de cada objeto del diccionario
                 fila = [dato.text() for dato in fila]
             # Imprimimos la fila para ver que to esté bien
             print(fila)
-            i = 0
-            # Recorremos la lista de los campos cliente con un indice i
-            for i, dato in enumerate(camposCliente):
-                # Asignamos a cada campo su dato correspondiente de la lista de datos
-                dato.setText(fila[i])
+            # La columna 0 es siempre el DNI
+            dni = fila[0]
+            # IMPORTANTE guardamos el oldDni para actualizar los otros datos
+            var.oldDni = dni
+            # Llamamos a la BBDD para que consulte los datos del cliente por su DNI
+            datosCliente = conexion.Conexion.datosCliente(dni)
+
+            # Asignar a cada campos su valor
+            var.ui.txtDniCli.setText(str(datosCliente[0]))
+            var.ui.txtApelidosCli.setText(str(datosCliente[1]))
+            var.ui.txtNombreCli.setText(str(datosCliente[2]))
+            var.ui.comboBoxProvincias.setCurrentText(str(datosCliente[3]))
+            if (datosCliente[4] == "Mujer"):
+                var.ui.rbtMujer.setChecked(True)
+            else:
+                var.ui.rbtHombre.setChecked(True)
+            var.ui.txtFecha.setText(str(datosCliente[5]))
+            pagos = datosCliente[6]
+            if 'Transferencia' in pagos:
+                var.ui.cbTransferencia.setChecked(True)
+            if 'Efectivo' in pagos:
+                var.ui.cbEfectivo.setChecked(True)
+            if 'Tarjeta' in pagos:
+                var.ui.cbTarjeta.setChecked(True)
+
 
         except Exception as e:
             print("Error ", e)
+
+    def bajaCliente():
+        try:
+            # Recoge el campo DNI (clave unica para cada cliente)
+            dni = var.ui.txtDniCli.text()
+            # DELETE FROM cliente WHERE dni =
+            conexion.Conexion.borraCliente(dni)
+            # Recarga la lista de clientes a la tabla
+            conexion.Conexion.cargarClientesTabla()
+            # Limpia los campos de input
+            Customers.limpiarCliente()
+
+        except Exception as error:
+            print("Error ", error)
 

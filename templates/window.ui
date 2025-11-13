@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>597</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -251,7 +251,7 @@
      <widget class="QPushButton" name="botAceptar">
       <property name="geometry">
        <rect>
-        <x>230</x>
+        <x>20</x>
         <y>480</y>
         <width>131</width>
         <height>31</height>
@@ -287,7 +287,7 @@
      <widget class="QPushButton" name="botSalir">
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>200</x>
         <y>480</y>
         <width>131</width>
         <height>31</height>
@@ -325,6 +325,32 @@
       <attribute name="buttonGroup">
        <string notr="true">buttonGroup</string>
       </attribute>
+     </widget>
+     <widget class="QPushButton" name="botBorrar">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>480</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Eliminar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="botModificar">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>480</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Modificar</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_facturacion">
