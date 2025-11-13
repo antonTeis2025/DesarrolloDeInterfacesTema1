@@ -23,7 +23,7 @@ Creamos el método salir para que muestre la ventana al pulsar el botón salir
 def Salir():  
     try: 
 	    # Creamos una variable que sea el objeto diaglogo.exec_() 
-        result = var.dlgSalir.exec_()  
+        result = var.dlgSalir.exec()  
         if result == QtWidgets.QDialog.Accepted:  
 	        # Si se pulsa aceptar, salir
             print("Saliendo...")  
