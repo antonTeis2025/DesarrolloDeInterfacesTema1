@@ -36,7 +36,7 @@ class Customers:
     def selPago():
         try:
             var.pay = [] # Vaciamos la lista de los metodos de pago
-            for i, data in enumerate(var.ui.checkBoxPago): # checkBoxPago es un grupo de botones
+            for i, data in enumerate(var.ui.buttonGroup): # checkBoxPago es un grupo de botones
                 if data.isChecked() and i == 0:
                     print("Paga en efectivo")
                     var.pay.append("Efectivo")
