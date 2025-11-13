@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets
+from PyQt6 import QtWidgets
 
 import var
 import sys
@@ -25,7 +25,7 @@ class Eventos():
 
     def Salir():
         try:
-            result = var.dlgSalir.exec_()
+            result = var.dlgSalir.exec()
             if result == QtWidgets.QDialog.Accepted:
                 print("Saliendo...")
                 sys.exit()

@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets
+from PyQt6 import QtWidgets
 
 import var
 
@@ -34,16 +34,22 @@ class Customers:
         var.provincia = provincia
 
     def selPago():
-        print()
-        if var.ui.cbTarjeta.isChecked():
-            var.pay.append("Tarjeta")
-            print("pago con tarjeta")
-        if var.ui.cbEfectivo.isChecked():
-            var.pay.append("Efectivo")
-            print("pago en efectivo")
-        if var.ui.cbTransferencia.isChecked():
-            var.pay.append("Transferencia")
-            print("pago con transferencia")
+        try:
+            var.pay = [] # Vaciamos la lista de los metodos de pago
+            for i, data in enumerate(var.ui.checkBoxPago): # checkBoxPago es un grupo de botones
+                if data.isChecked() and i == 0:
+                    print("Paga en efectivo")
+                    var.pay.append("Efectivo")
+                if data.isChecked() and i == 1:
+                    print("Paga en tarjeta")
+                    var.pay.append("Tarjeta")
+                if data.isChecked() and i == 2:
+                    print("Paga en transferencia")
+                    var.pay.append("Transferencia")
+
+        except Exception as error:
+            print("Error ", error)
+        print(var.pay)
 
     def selSexo():
         global sex

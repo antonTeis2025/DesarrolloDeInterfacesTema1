@@ -1,5 +1,5 @@
-from PyQt5 import QtSql
-from PyQt5.uic.Compiler.qtproxies import QtWidgets
+from PyQt6 import QtSql
+from PyQt6.uic.Compiler.qtproxies import QtWidgets
 
 import var
 import os

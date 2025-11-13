@@ -166,6 +166,9 @@
       <property name="text">
        <string>Tarjeta</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
      </widget>
      <widget class="QCheckBox" name="cbTransferencia">
       <property name="geometry">
@@ -179,6 +182,9 @@
       <property name="text">
        <string>Transferencia</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
      </widget>
      <widget class="QComboBox" name="comboBoxProvincias">
       <property name="geometry">
@@ -316,6 +322,9 @@
       <property name="text">
        <string>Efectivo</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_facturacion">
@@ -352,6 +361,10 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="rbtSexo"/>
+  <buttongroup name="buttonGroup">
+   <property name="exclusive">
+    <bool>false</bool>
+   </property>
+  </buttongroup>
  </buttongroups>
 </ui>

@@ -54,7 +54,7 @@ class Main(QtWidgets.QMainWindow):
         # Asignamos al boton de aceptar la funcion insertarCliente
         var.ui.botAceptar.clicked.connect(clients.Customers.insertarCliente)
         # Hacemos que en la tabla no se seleccione solamente una celda, sino toda su fila
-        var.ui.tablaClientes.setSelectionBehavior(QtWidgets.QTableWidget.SelectRows)
+        var.ui.tablaClientes.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows)
         # Hacemos que al hacer click en un registro de la tabla, se cargue el cliente
         var.ui.tablaClientes.clicked.connect(clients.Customers.cargarCliente)
 
@@ -63,10 +63,10 @@ class Main(QtWidgets.QMainWindow):
         # Comprobar el DNI cada vez que se deja de escribir
         var.ui.txtDniCli.editingFinished.connect(clients.Customers.checkDni)
         # Cada vez que se edite ComboBox provincia, ejecuta selProvincia
-        var.ui.comboBoxProvincias.activated[str].connect(clients.Customers.selProvincia)
+        var.ui.comboBoxProvincias.textActivated.connect(clients.Customers.selProvincia)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
     window = Main()
     window.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
