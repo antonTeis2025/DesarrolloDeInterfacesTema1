@@ -6,6 +6,9 @@ import var, events, clients, calendar # importacion de los ficheros locales
 import conexion
 
 
+class DialogoArchivo(QtWidgets.QFileDialog):
+    def __init__(self, parent=None):
+        super(DialogoArchivo, self).__init__(parent)
 
 
 class Main(QtWidgets.QMainWindow):
@@ -23,11 +26,14 @@ class Main(QtWidgets.QMainWindow):
         var.dlgSalir = QtWidgets.QDialog()
         # Hacemos el setupUI con el dialogo como argumento
         var.avisosalir.setupUi(var.dlgSalir)
+        # Instanciamos el dialogo de abrir archivo
+        var.dlgAbrir = DialogoArchivo()
 
         # Cargar conexion a base de datos
-        conexion.Conexion.db_connection(var.dbfile)
+        conexion.Conexion.db_connection()
         # Carga valores de la tabla clientes a la tabla de la UI
         conexion.Conexion.cargarClientesTabla()
+
 
         # --- Conexion con los eventos ---
 
@@ -35,7 +41,6 @@ class Main(QtWidgets.QMainWindow):
         events.Eventos.cargaProvincias()
 
         # Eventos botones
-
 
         # Boton que cuando se le da a salir limpia todos los datos
         var.ui.botSalir.clicked.connect(clients.Customers.limpiarCliente)
@@ -63,6 +68,10 @@ class Main(QtWidgets.QMainWindow):
         var.ui.botBorrar.clicked.connect(clients.Customers.bajaCliente)
         # Conectado boton actualizar con su funcion
         var.ui.botModificar.clicked.connect(clients.Customers.modificaCliente)
+        # Conectado boton toolbar de copia de seguridad
+        var.ui.actionBackup.triggered.connect(events.Eventos.crearBackup)
+        # Conectado boton toolbar restaurar copia
+        var.ui.actionRestaurar.triggered.connect(events.Eventos.restaurarBackup)
 
         # Eventos editando
 

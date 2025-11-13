@@ -53,7 +53,7 @@ class Conexion():
         else:
             print("Error ", query.lastError().text())
 
-    def db_connection(self):
+    def db_connection():
         # Comprobamos que existe el archivo de BBDD
         if not os.path.exists(var.dbfile):
             QtWidgets.QMessageBox.critical(None,

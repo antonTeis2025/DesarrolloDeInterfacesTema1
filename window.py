@@ -12,11 +12,11 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 597)
+        MainWindow.resize(800, 638)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tabWidget = QtWidgets.QTabWidget(parent=self.centralwidget)
-        self.tabWidget.setGeometry(QtCore.QRect(10, 0, 781, 571))
+        self.tabWidget.setGeometry(QtCore.QRect(10, 10, 781, 561))
         self.tabWidget.setObjectName("tabWidget")
         self.tab_clientes = QtWidgets.QWidget()
         self.tab_clientes.setObjectName("tab_clientes")
@@ -126,10 +126,19 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.toolBar = QtWidgets.QToolBar(parent=MainWindow)
+        self.toolBar.setObjectName("toolBar")
+        MainWindow.addToolBar(QtCore.Qt.ToolBarArea.TopToolBarArea, self.toolBar)
         self.actionSalir = QtGui.QAction(parent=MainWindow)
         self.actionSalir.setObjectName("actionSalir")
+        self.actionBackup = QtGui.QAction(parent=MainWindow)
+        self.actionBackup.setObjectName("actionBackup")
+        self.actionRestaurar = QtGui.QAction(parent=MainWindow)
+        self.actionRestaurar.setObjectName("actionRestaurar")
         self.menuArchilo.addAction(self.actionSalir)
         self.menubar.addAction(self.menuArchilo.menuAction())
+        self.toolBar.addAction(self.actionBackup)
+        self.toolBar.addAction(self.actionRestaurar)
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
@@ -163,7 +172,10 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_clientes), _translate("MainWindow", "Clientes"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_facturacion), _translate("MainWindow", "Facturacion"))
         self.menuArchilo.setTitle(_translate("MainWindow", "Archivo"))
+        self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))
         self.actionSalir.setText(_translate("MainWindow", "Salir"))
+        self.actionBackup.setText(_translate("MainWindow", "Backup"))
+        self.actionRestaurar.setText(_translate("MainWindow", "Restaurar"))
 
 
 if __name__ == "__main__":
